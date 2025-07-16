@@ -1,0 +1,39 @@
+# Write a program that reads a text file and returns the number 
+# of lines as well as the total number of characters in the file.
+import sys
+
+test_file = sys.argv[1]
+
+count_line = 0
+count_char = 0
+
+with open(test_file, "r") as input:
+  for line in input:
+    count_line += 1
+    count_char += len(line)
+
+
+print(f"{count_line} lines\n{count_char} characters")
+
+
+# Write a program that reads a comma delimited CSV file with 
+# four columns and returns the average of each column in the file.
+import sys
+import csv
+
+test_file = sys.argv[1]
+
+average = [0.0, 0.0, 0.0, 0.0]
+total = 0
+
+with open(test_file, "r") as csvfile:
+    input = csv.reader(csvfile)
+    for line in input:
+       column = 0
+       total += 1
+       for number in line:
+          average[column] += float(number)
+          column += 1
+
+for number in average:
+   print(number/total, end = " ")
