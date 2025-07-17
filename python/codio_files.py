@@ -110,3 +110,44 @@ with open(test_file, "r") as input_file:
 print("The oldest person is {}.".format(oldest_name))
 '''
 
+
+# Write a program that reads a comma delimited CSV file and prints all 
+# of the cities which reside in the Southern Hemisphere. Note, any latitude with a negative value is south of the equator.
+import sys, csv
+
+test_file = sys.argv[1]
+
+output = []
+
+with open(test_file, "r") as input:
+   reader = csv.reader(input, delimiter = ', ')
+   next(reader)
+   for city, country, latitude, longitude in reader:
+      if float(latitude) < 0:
+        output.append(city)
+
+output = ",".join(output)
+print(f"The following cities are in the Southern Hemisphere: {output}.")
+
+'''
+Given solution:
+
+import sys, csv
+
+test_file = sys.argv[1]
+cities = []
+
+with open(test_file, "r") as input_file:
+    reader = csv.reader(input_file)
+    next(reader)
+    for city, country, latitude, longitude in reader:
+        if int(latitude) < 0:
+            cities.append(city)
+            
+print("The following cities are in the Southern Hemisphere: ", end="")
+for city in cities:
+    if city == cities[-1]:
+        print(city + ".")
+    else:
+        print(city, end=", ")
+'''
