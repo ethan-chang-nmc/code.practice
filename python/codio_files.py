@@ -1,3 +1,6 @@
+'''
+Questions from Codio
+'''
 # Write a program that reads a text file and returns the number 
 # of lines as well as the total number of characters in the file.
 import sys
@@ -70,6 +73,40 @@ with open(test_file, "r") as input_file:
 # Write a program that reads a tab delimited CSV file and prints the 
 # name of the oldest person in the file.
 import sys
+import csv
 
 test_file = sys.argv[1]
+
+with open(test_file, "r") as input_file:
+    reader = csv.reader(input_file, delimiter='\t')
+    oldest_name = None
+    max_age = -1
+    next(reader)
+    for line in reader:
+        name, age = line[0], int(line[1])
+        if age > max_age:
+            max_age = age
+            oldest_name = name
+
+print(f"The oldest person is {oldest_name}.")
+
+'''
+Given solution:
+
+import sys, csv
+
+test_file = sys.argv[1]
+oldest_age = 0
+oldest_name = ""
+
+with open(test_file, "r") as input_file:
+    reader = csv.reader(input_file, delimiter="\t")
+    next(reader)
+    for name, age, career in reader:
+        if int(age) > oldest_age:
+            oldest_age = int(age)
+            oldest_name = name
+            
+print("The oldest person is {}.".format(oldest_name))
+'''
 
