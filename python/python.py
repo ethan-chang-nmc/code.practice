@@ -37,3 +37,39 @@ with open(test_file, "r") as csvfile:
 
 for number in average:
    print(number/total, end = " ")
+
+
+# Write a program that reads a text file and prints the contents 
+# in reverse order.
+import sys
+
+test_file = sys.argv[1]
+
+with open(test_file, "r") as input:
+    reader = input.readlines()
+    pos = len(reader) - 1
+    while pos >= 0:
+        print(reader[pos].strip())
+        pos -= 1
+
+'''
+Given solution:
+
+import sys
+
+test_file = sys.argv[1]
+
+with open(test_file, "r") as input_file:
+    lines = input_file.readlines()
+    lines.reverse()
+    for line in lines:
+        print(line)
+'''
+
+
+# Write a program that reads a tab delimited CSV file and prints the 
+# name of the oldest person in the file.
+import sys
+
+test_file = sys.argv[1]
+
