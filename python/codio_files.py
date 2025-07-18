@@ -112,7 +112,8 @@ print("The oldest person is {}.".format(oldest_name))
 
 
 # Write a program that reads a comma delimited CSV file and prints all 
-# of the cities which reside in the Southern Hemisphere. Note, any latitude with a negative value is south of the equator.
+# of the cities which reside in the Southern Hemisphere. Note, any latitude 
+# with a negative value is south of the equator.
 import sys, csv
 
 test_file = sys.argv[1]
