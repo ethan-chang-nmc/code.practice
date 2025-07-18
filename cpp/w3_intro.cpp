@@ -11,5 +11,5 @@ Same basic data types as java
 int main()
 {
     int num1 = 2;
-    std::cout << "Hello World!" << num1 + 2 << "add"; // alternative std:: for namespace
+    std::cout << "Hello World! " << num1 + 2 << "haha"; // alternative std:: for namespace
 }
