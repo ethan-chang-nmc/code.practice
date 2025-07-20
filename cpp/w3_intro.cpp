@@ -20,4 +20,9 @@ int main()
     std::cin >> a;
     std::cout << "Your number is: " << a;
 
+    float f1 = 35e3;
+    double d1 = 12E4;
+    std::cout << f1 << "\n";
+    std::cout << d1;
+    return 0;
 }
