@@ -1,11 +1,12 @@
 /*
 Basic Notes:
 
-Same basic data types as java
+Same basic data types as java, must import string library
 
 */
 
 #include <iostream>
+#include <string>
 // using namespace std; can use this
 
 int main()
@@ -25,4 +26,14 @@ int main()
     std::cout << f1 << "\n";
     std::cout << d1;
     return 0;
+
+    std::string test = "Hello";
+    
+    // creating auto variables - once assigned it stays the same
+    auto myNum = 5; // int
+    auto myFloatNum = 5.99; // float
+    auto myDoubleNum = 9.98; // double
+    auto myLetter = 'D'; // char
+    auto myBoolean = true; // bool
+    auto myString = std::string("Hello"); // std::string
 }
