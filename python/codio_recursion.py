@@ -23,3 +23,25 @@ def recursive_math(number):
 if __name__ == "__main__":
     test_num = 15
     print(recursive_math(test_num))
+
+
+# Write a recursive function called list_math that takes a list of non-zero integers 
+# as a parameter. Return the recursive sum for the numbers in the list.
+def list_math(input):
+    if len(input) == 1:
+        return input[0]
+    else:
+        new_list = input[:-1]
+        return input[-1] + list_math(new_list)
+
+if __name__ == "__main__":
+    test_list = [14, 20, 7, 2]
+    print(list_math(test_list))
+'''
+Given solution:
+def list_math(lst):
+          if len(lst) == 1:
+            return lst[0]
+          else:
+            return lst[0] + list_math(lst[1:])
+'''
