@@ -104,3 +104,27 @@ def best_team(file):
                 best_team = row[0]
         return best_team
 '''
+
+
+# Write a function called is_palindrome that takes a string as a parameter. The function will return 
+# True if the string is a palindrome (is the same forward and backward). The function will return False 
+# if the string is not a palindrome.
+def is_palindrome(input):
+    half = int(len(input)/2)
+    for i in range(half + 1):
+        if input[i] != input[(i+1)*-1]:
+            return False
+    return True
+'''
+Given solution:
+def is_palindrome(string):
+    reversed_string= ""
+    position = len(string) - 1
+    while position >= 0:
+        reversed_string += string[position]
+        position -= 1
+    if string == reversed_string:
+        return True
+    else:
+        return False
+'''
