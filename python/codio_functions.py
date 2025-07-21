@@ -68,6 +68,8 @@ def search_list(lst, term):
 # has a header of Tm,Lg,G,W,L, which stands for team name, league, games played, wins, and losses. Below are the file name and file path variables you will need for this exercise.
 import csv
 
+mlb_data = "student_folder/.exercises/mlb_data.csv"
+
 def best_team(input_csv):
     most_wins = -1
     team = ""
@@ -76,8 +78,29 @@ def best_team(input_csv):
         next(reader)
         for name, league, games, wins, losses in reader:
             wins = int(wins)
-            if wins < most_wins:
+            if wins > most_wins:
                 most_wins = wins
                 team = name
     return team
-            
+
+print(best_team(mlb_data))
+'''
+Given solution:
+import csv
+
+mlb_data = "student_folder/.exercises/mlb_data.csv"
+
+def best_team(file):
+    """Read a CSV of baseball data.
+    Return the team name with the most wins"""
+    with open(file, "r") as csv_file:
+        reader = csv.reader(csv_file)
+        next(reader)
+        most_wins = 0
+        best_team = ""
+        for row in reader:
+            if int(row[3]) > most_wins:
+                most_wins = int(row[3])
+                best_team = row[0]
+        return best_team
+'''
