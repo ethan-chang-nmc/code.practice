@@ -58,15 +58,48 @@ def is_power(number):
         return is_power(number/2)
     
 if __name__ == "__main__":
-    example_number = 27
-    print(is_power(example_number))
-    '''
-    Given solution:
-    def is_power(num):
-          if num == 2:
-            return True
-          elif num > 2:
-            return is_power(num/2)
-          else:
-            return False
-    '''
+    test_number = 27
+    print(is_power(test_number))
+'''
+Given solution:
+def is_power(num):
+    if num == 2:
+        return True
+    elif num > 2:
+        return is_power(num/2)
+    else:
+        return False
+'''
+
+
+# Write a recursive function called filter_string that takes a string as a parameter. Return 
+# a string that filters out characters that are consonants.
+def filter_string(input):
+    vowels = ["a", "e", "i", "o", "u"]
+    if len(input) == 0:
+        return ""
+    else:
+        if input[0].lower() in vowels:
+          return input[0] + filter_string(input[1:])
+        else:
+          return filter_string(input[1:])
+
+if __name__ == "__main__":
+    test_word = 'muSic'
+    print(filter_string(test_word))
+
+'''
+Given solution:
+def filter_string(string):
+  def helper(char):
+    vowels = ['A', 'E', 'I', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u']
+    if char not in vowels:
+      return ''
+    else:
+      return char
+        
+  if len(string) == 0:
+    return ''
+  else:
+    return helper(string[0]) + filter_string(string[1:])
+'''
