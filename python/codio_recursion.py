@@ -45,3 +45,18 @@ def list_math(lst):
           else:
             return lst[0] + list_math(lst[1:])
 '''
+
+
+# Write a recursive function called is_power that takes an integer as a parameter. Return 
+# a boolean that indicates if the parameter is a power of two.
+def is_power(number):
+    if number == 1:
+        return True
+    elif number < 1:
+        return False
+    else:
+        return is_power(number/2)
+    
+if __name__ == "__main__":
+    example_number = 27
+    print(is_power(example_number))
