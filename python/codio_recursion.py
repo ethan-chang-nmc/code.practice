@@ -60,3 +60,13 @@ def is_power(number):
 if __name__ == "__main__":
     example_number = 27
     print(is_power(example_number))
+    '''
+    Given solution:
+    def is_power(num):
+          if num == 2:
+            return True
+          elif num > 2:
+            return is_power(num/2)
+          else:
+            return False
+    '''
