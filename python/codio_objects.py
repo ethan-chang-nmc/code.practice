@@ -32,3 +32,12 @@ class SuperHero:
 if __name__ == "__main__":
     superman = SuperHero("Superman", "Clark", ["flight", "laser eyes", "super strenght", "x-ray vision"])
     print(superman.name, superman.secret_identity, superman.powers)
+
+
+# Define the class Observation which will help record observational data from a scientific outpost in Antarctica. The class should have a constructor that accepts parameters for date, temperature, elevation, precipitation, and penguins. 
+# Since Antarctica is a desert, precipitation should default to 0.
+# date- String with the date of the observation, e.g. "October 26, 2019"
+# temperature - Float with the temperature in Celsius, e.g. -47
+# elevation - Float with elevation in meters, e.g. 329.4
+# penguins - Integer representing the number of penguins observed, e.g. 3
+# precipitation- Float with precipitation in centimeters, e.g. 0.7
