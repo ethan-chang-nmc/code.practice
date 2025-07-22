@@ -8,7 +8,6 @@ class PracticeClass:
 # breed - "american shorthair"
 # color - "black"
 # name - "kiwi"
-# Test your code with print statements and the TRY IT button below before submitting your work.
 class Cat:
     def __init__(self):
         self.breed = "american shorthair"
@@ -18,3 +17,9 @@ class Cat:
 if __name__ == "__main__":
     mycat = Cat()       
     print(f"My cat is an {mycat.color} {mycat.breed}. She is named {mycat.name}.")
+
+
+# Define the class SuperHero. The class should have a constructor that accepts the following parameters (in this order):
+# name- String with the name of the super hero, e.g. "Spider-Man"
+# secret_identity - String with the true name of the hero, e.g. "Peter Parker"
+# powers - A list of strings with each element representing a power, e.g. ["superhuman strength", "superhuman speed", "superhuman reflexes", "superhuman durability", "healing factor", "spider-sense alert", "heightened senses", "wallcrawling"]
