@@ -23,3 +23,12 @@ if __name__ == "__main__":
 # name- String with the name of the super hero, e.g. "Spider-Man"
 # secret_identity - String with the true name of the hero, e.g. "Peter Parker"
 # powers - A list of strings with each element representing a power, e.g. ["superhuman strength", "superhuman speed", "superhuman reflexes", "superhuman durability", "healing factor", "spider-sense alert", "heightened senses", "wallcrawling"]
+class SuperHero:
+    def __init__(self, name, secret_identity, powers):
+        self.name = name
+        self.secret_identity = secret_identity
+        self.powers = powers
+
+if __name__ == "__main__":
+    superman = SuperHero("Superman", "Clark", ["flight", "laser eyes", "super strenght", "x-ray vision"])
+    print(superman.name, superman.secret_identity, superman.powers)
