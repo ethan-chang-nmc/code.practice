@@ -58,3 +58,14 @@ if __name__ == "__main__":
     tomorrow.precipitation = 0.7
     print(today.date, today.temperature, today.elevation, today.penguins, today.precipitation)
     print(tomorrow.date, tomorrow.temperature, tomorrow.elevation, tomorrow.penguins, tomorrow.precipitation)
+
+
+# Define the class BigCat which will help record information on the animals in the Panthera genus (tiger, lion, jaguar, leopard, and snow leopard). 
+# Since all animals are in the same genus, the object should have the class attribute genus with the value panthera. The constructor should accept the following parameters (in this order):
+# species- String with the species of the animal, e.g. "tigris"
+# common_name - String with the common name of the animal, e.g. "tiger"
+# habitat - List of strings with location of the animal, e.g. ["asia"]
+class BigCat:
+    genus = "panthera"
+    def __init__(self, species, common_name, habitat):
+        pass
