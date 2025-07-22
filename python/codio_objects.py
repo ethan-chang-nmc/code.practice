@@ -41,3 +41,20 @@ if __name__ == "__main__":
 # elevation - Float with elevation in meters, e.g. 329.4
 # penguins - Integer representing the number of penguins observed, e.g. 3
 # precipitation- Float with precipitation in centimeters, e.g. 0.7
+import copy
+
+class Observation:
+    def __init__(self, date, temperature, elevation, penguins, precipitation = 0):
+        self.date = date
+        self.temperature = temperature
+        self.elevation = elevation
+        self.penguins = penguins
+        self.precipitation = precipitation
+
+if __name__ == "__main__":
+    today = Observation("October 25, 2019", -47, elevation = 329.4, penguins = 3)
+    tomorrow = copy.deepcopy(today)
+    tomorrow.date = "October 26, 2019"
+    tomorrow.precipitation = 0.7
+    print(today.date, today.temperature, today.elevation, today.penguins, today.precipitation)
+    print(tomorrow.date, tomorrow.temperature, tomorrow.elevation, tomorrow.penguins, tomorrow.precipitation)
