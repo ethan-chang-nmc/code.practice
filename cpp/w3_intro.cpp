@@ -7,7 +7,7 @@ Same basic data types as java, must import string library
 
 #include <iostream>
 #include <string>
-// using namespace std; can use this
+// using namespace std; can use this instead of putting std::
 
 int main()
 {
@@ -31,7 +31,7 @@ int main()
     // testing string
     std::string test = "Hello";
     
-    // creating auto variables - once assigned it stays the same
+    // creating auto variables - once assigned type stays the same
     auto myNum = 5; // int
     auto myFloatNum = 5.99; // float
     auto myDoubleNum = 9.98; // double
@@ -43,4 +43,13 @@ int main()
     int x = 5;
     ++x; // --
     std::cout << x;
+
+    /* 
+    Bit manipulation:
+    &=, |=, ^=, >>=, <<=
+    */
+
+    // logical operators, returns boolean (1 or 0)
+    std::cout << (x > 3 && x < 10);
+    std::cout << (x > 3 || x < 4);
 }
