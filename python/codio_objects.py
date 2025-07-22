@@ -68,4 +68,10 @@ if __name__ == "__main__":
 class BigCat:
     genus = "panthera"
     def __init__(self, species, common_name, habitat):
-        pass
+        self.species = species
+        self.common_name = common_name
+        self.habitat = habitat
+
+if __name__ == "__main__":
+    tiger = BigCat("tigris", "tiger", ["asia"])
+    print(tiger.genus, tiger.species, tiger.common_name, tiger.habitat)
