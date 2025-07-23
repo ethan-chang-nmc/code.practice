@@ -1,0 +1,2 @@
+# The code below creates the CelestialBody class as well as the function compared_to_earth. Transform the compared_to_earth 
+# function so that it becomes an instance method of the CelestialBody class.
