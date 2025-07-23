@@ -18,3 +18,5 @@ class CelestialBody:
 planet = CelestialBody("Jupiter", 142984, 778360000, 79)
 print(planet.compared_to_earth())
 
+# Using the same CelestialBody class, write a static method closer_to_sun that compares two CelectialBody objects and returns 
+# the name of the object that is closes to the sun.
