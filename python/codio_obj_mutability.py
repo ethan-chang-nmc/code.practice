@@ -83,3 +83,18 @@ class Library:
     def return_book(self, title):
         self.on_loan.remove(title)
         self.available.append(title)
+
+if __name__ == "__main__":
+    my_library = Library()
+    my_library.add_books(["Four Seasons", "Say Nothing", "Milkman", "Harry Potter and the Order of the Phoenix"])
+    print(my_library.available)
+    my_library.borrow_book("Harry Potter and the Order of the Phoenix")
+    my_library.borrow_book("Say Nothing")
+    print(my_library.available)
+    print(my_library.on_loan)
+    my_library.return_book("Say Nothing")
+    print(my_library.available)
+    print(my_library.on_loan)
+'''
+self note: dont forget to add docstring to method!
+'''
