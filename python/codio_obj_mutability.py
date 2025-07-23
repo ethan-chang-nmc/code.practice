@@ -98,3 +98,13 @@ if __name__ == "__main__":
 '''
 self note: dont forget to add docstring to method!
 '''
+
+
+# Create the following methods for the Subway class:
+# board - Accepts an integer that represents the number of passengers boarding the subway.
+# disembark - Accepts an integer that represents the number of passengers exiting the subway. There cannot be a negative number of passengers on a subway. The fewest number of passengers on a subway is 0.
+# advance - Moves the subway to the next stop. If self.direction is "south" the subway moves from Alewife to Kendall. If self.direction is "north" the subway moves from Kendall to Alewife. When the subway has reached its final stop, self.direction should change.
+# distance - Accepts a string that represents a stop and returns the number of stops between the subway and the desired stop. The distance should be a positive number.
+# change_fare - Accepts a float and changes the fare for all instances of the Subway class.
+# calculate_fares - Calculates the fare for each passenger boarding the subway and adds it to total_fares.
+ 
