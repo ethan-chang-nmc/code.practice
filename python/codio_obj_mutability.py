@@ -117,16 +117,23 @@ class Subway:
         self.total_fares = 0
 
     def calculate_fares(self, board):
+        "calculates fares of people boarding"
         self.total_fares += board * self.fare
 
     def board(self, people):
+        "boards people"
         self.passengers += people
         self.calculate_fares(people)
     
     def disembark(self, people):
-        self.passengers -= people
+        "deboards people, prevents going below 0"
+        if people > self.passengers:
+            self.passengers = 0
+        else:
+            self.passengers -= people
     
     def advance(self):
+        "moves subway to next stop and changes directions when at ends"
         if (self.direction == "north") and (self.stops.index(self.current_stop) == 0):
             self.direction = "south"
         elif (self.direction == "south") and (self.stops.index(self.current_stop) == len(self.stops) - 1):
@@ -139,6 +146,7 @@ class Subway:
             self.current_stop = self.stops[self.stops.index(self.current_stop) - 1]
     
     def distance (self, destination):
+        "calculates distance between current and desired stop"
         dist = self.stops.index(self.current_stop) - self.stops.index(destination)
         if dist < 0:
             dist *= -1
@@ -146,6 +154,7 @@ class Subway:
     
     @classmethod
     def change_fare(cls, new_fare):
+        "changes the fare for all instances of Subway class"
         cls.fare = new_fare
 '''
 Given solution: Forgot to check for negative passengers
