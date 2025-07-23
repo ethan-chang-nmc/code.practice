@@ -45,3 +45,18 @@ if __name__ == "__main__":
 
 # Using the same CelestialBody class, create a factory method called make_earth. This method returns a CelestialBody object 
 # for planet Earth. Earth is 149,600,000 km from the Sun, has a diameter of 12,756.3 km, and has one moon.
+class CelestialBody:
+    """Respresents a celetstial body"""
+    def __init__(self, name, diameter, distance, moons):
+        self.name = name
+        self.diameter = diameter
+        self.distance = distance
+        self.moons = moons
+    
+    @classmethod
+    def make_earth(cls):
+        return cls("Earth", 12756.3, 149600000, 1)
+    
+if __name__ == "__main__":
+    planet = CelestialBody.make_earth()
+    print(planet.name, planet.diameter, planet.distance, planet.moons)
