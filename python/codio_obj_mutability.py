@@ -107,4 +107,53 @@ self note: dont forget to add docstring to method!
 # distance - Accepts a string that represents a stop and returns the number of stops between the subway and the desired stop. The distance should be a positive number.
 # change_fare - Accepts a float and changes the fare for all instances of the Subway class.
 # calculate_fares - Calculates the fare for each passenger boarding the subway and adds it to total_fares.
- 
+class Subway:
+    fare = 2.4
+    def __init__(self):
+        self.stops = ["Alewife", "Davis", "Porter", "Harvard", "Central", "Kendall"]
+        self.current_stop= "Alewife"
+        self.direction = "south"
+        self.passengers = 0
+        self.total_fares = 0
+
+    def calculate_fares(self, board):
+        self.total_fares += board * self.fare
+
+    def board(self, people):
+        self.passengers += people
+        self.calculate_fares(people)
+    
+    def disembark(self, people):
+        self.passengers -= people
+    
+    def advance(self):
+        if (self.direction == "north") and (self.stops.index(self.current_stop) == 0):
+            self.direction = "south"
+        elif (self.direction == "south") and (self.stops.index(self.current_stop) == len(self.stops) - 1):
+            self.direction = "north"
+        else:
+            pass
+        if self.direction == "south":
+            self.current_stop = self.stops[self.stops.index(self.current_stop) + 1]
+        else:
+            self.current_stop = self.stops[self.stops.index(self.current_stop) - 1]
+    
+    def distance (self, destination):
+        dist = self.stops.index(self.current_stop) - self.stops.index(destination)
+        if dist < 0:
+            dist *= -1
+        return dist
+    
+    @classmethod
+    def change_fare(cls, new_fare):
+        cls.fare = new_fare
+'''
+Given solution: Forgot to check for negative passengers
+def disembark(self, passengers_leaving):
+    """Subtracts the number of people exiting the subway"""
+    if passengers_leaving > self.passengers:
+      self.passengers = 0
+    else:
+      self.passengers -= passengers_leaving
+
+'''
