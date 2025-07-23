@@ -60,3 +60,26 @@ class CelestialBody:
 if __name__ == "__main__":
     planet = CelestialBody.make_earth()
     print(planet.name, planet.diameter, planet.distance, planet.moons)
+
+
+# Create the following methods for the Library class:
+# add_books - takes a list of book titles (strings) and adds each title to the list of available books
+# borrow_book - takes a book title (string) and moves it from the available list to the list of books on loan
+# return_book - takes a book title (string) and moves it from the list of books on loan to the list of available books
+class Library:
+    """List of available books and list of books on loan"""
+    def __init__(self):
+        self.available = []
+        self.on_loan = []
+    
+    def add_books(self, input):
+        for book in input:
+            self.available.append(book)
+    
+    def borrow_book(self, title):
+        self.available.remove(title)
+        self.on_loan.append(title)
+    
+    def return_book(self, title):
+        self.on_loan.remove(title)
+        self.available.append(title)
