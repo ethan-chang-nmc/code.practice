@@ -36,4 +36,11 @@ if __name__ == "__main__":
     my_artist = Artist('Bill Watterson', 'ink and paper', 'cartoons', 'Calvin and Hobbes')
     print(my_artist._Artist__name, my_artist._Artist__medium, my_artist._Artist__style, my_artist._Artist__famous_artwork)
     # print(my_artist.__name, my_artist.__medium, my_artist.__style, my_artist.__famous_artwork)
+
+
+# Define the BankAccount class which has attributes for checking and savings. Use the Python convention to make these 
+# attributes private. Create the getters get_checking and get_savings, and create the setters set_checking and set_savings.
+# Do not use the property decorator or function; follow the Python convention for private attributes.
+
+
     
