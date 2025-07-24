@@ -47,18 +47,46 @@ class BankAccount:
         self._savings = 0
     
     def get_checking(self):
-        print(self._checking)
+        return self._checking
     
     def get_savings(self):
-        print(self._savings)
+        return self._savings
     
     def set_checking(self, amount):
         self._checking = amount
     
     def set_savings(self, amount):
-        self.set_savings = amount
+        self._savings = amount
 
 
 # Define the Dancer class which has attributes for name, nationality, and style. Use the Python convention to make these 
 # attributes private. Create the getters and setters using the property function.
 # Use the property function; follow the Python convention for private attributes.
+class Dancer:
+  def __init__(self, name, nationality, style):
+    self._name = name
+    self._nationality = nationality
+    self._style = style
+    
+  def get_name(self):
+    return self._name
+  
+  def set_name(self, new_name):
+    self._name = new_name
+    
+  def get_nationality(self):
+    return self._nationality
+  
+  def set_nationality(self, new_nat):
+    self._nationality = new_nat
+    
+  def get_style(self):
+    return self._style
+  
+  def set_style(self, new_style):
+    self._style = new_style
+    
+  name = property(get_name, set_name)
+  nationality = property(get_nationality, set_nationality)
+  style = property(get_style, set_style)
+        
