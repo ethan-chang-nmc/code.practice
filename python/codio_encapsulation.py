@@ -24,10 +24,16 @@ if __name__ == "__main__":
 
 # Define the Artist class which has attributes for name, medium, style, and famous_artwork. Do not use the Python 
 # convention to make these attributes.
+# You do not need to create any getters or setters; do not follow the Python convention for private attributes.
 class Artist:
     def __init__(self, name, medium, style, famous_artwork):
         self.__name = name
         self.__medium = medium
         self.__style = style
         self.__famous_artwork = famous_artwork
+
+if __name__ == "__main__":
+    my_artist = Artist('Bill Watterson', 'ink and paper', 'cartoons', 'Calvin and Hobbes')
+    print(my_artist._Artist__name, my_artist._Artist__medium, my_artist._Artist__style, my_artist._Artist__famous_artwork)
+    # print(my_artist.__name, my_artist.__medium, my_artist.__style, my_artist.__famous_artwork)
     
