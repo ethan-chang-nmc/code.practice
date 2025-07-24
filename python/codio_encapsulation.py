@@ -24,3 +24,10 @@ if __name__ == "__main__":
 
 # Define the Artist class which has attributes for name, medium, style, and famous_artwork. Do not use the Python 
 # convention to make these attributes.
+class Artist:
+    def __init__(self, name, medium, style, famous_artwork):
+        self.__name = name
+        self.__medium = medium
+        self.__style = style
+        self.__famous_artwork = famous_artwork
+    
