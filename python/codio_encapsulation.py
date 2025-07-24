@@ -57,3 +57,8 @@ class BankAccount:
     
     def set_savings(self, amount):
         self.set_savings = amount
+
+
+# Define the Dancer class which has attributes for name, nationality, and style. Use the Python convention to make these 
+# attributes private. Create the getters and setters using the property function.
+# Use the property function; follow the Python convention for private attributes.
