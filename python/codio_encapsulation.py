@@ -7,3 +7,5 @@ __AttributeName can give appearance of private
 -> __AttributeName renamed by interpreter to _ClassName__AttrbuteName
 -> use getters/setters to get and manipulate these variables @property, @name.setter
 '''
+# Define the Country class which has attributes for name, capital, population, and 
+# continent. Please use the Python convention for making these attributes private.
