@@ -90,3 +90,6 @@ class Dancer:
   nationality = property(get_nationality, set_nationality)
   style = property(get_style, set_style)
         
+
+# Define the Cyclist class which has attributes name, nationality, and nickname. Use the Python convention to make these 
+# attributes private. Create the getters and setters using the property decorator.
