@@ -41,6 +41,19 @@ if __name__ == "__main__":
 # Define the BankAccount class which has attributes for checking and savings. Use the Python convention to make these 
 # attributes private. Create the getters get_checking and get_savings, and create the setters set_checking and set_savings.
 # Do not use the property decorator or function; follow the Python convention for private attributes.
-
-
+class BankAccount:
+    def __init__(self):
+        self._checking = 0
+        self._savings = 0
     
+    def get_checking(self):
+        print(self._checking)
+    
+    def get_savings(self):
+        print(self._savings)
+    
+    def set_checking(self, amount):
+        self._checking = amount
+    
+    def set_savings(self, amount):
+        self.set_savings = amount
