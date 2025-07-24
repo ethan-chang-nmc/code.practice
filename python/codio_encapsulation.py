@@ -20,3 +20,7 @@ class Country:
 if __name__ == "__main__":
     my_country = Country('France', 'Paris', 67081000, 'Europe')
     print(my_country._name, my_country._capital, my_country._population, my_country._continent)
+
+
+# Define the Artist class which has attributes for name, medium, style, and famous_artwork. Do not use the Python 
+# convention to make these attributes.
