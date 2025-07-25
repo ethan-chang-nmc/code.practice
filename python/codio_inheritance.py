@@ -45,3 +45,9 @@ class BlogPost(Book):
         self.website = website
         self.word_count = word_count
         self.page_views = page_views
+
+
+# Create the class Child such that the following criteria are met:
+# Child is a subclass of Parent1 and Parent2
+# Override identify so that it returns “This method is called from Child”
+# Create the method identify2 that invokes the identify method from Parent2. This must be done using the super() keyword.
