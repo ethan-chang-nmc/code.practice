@@ -1,6 +1,7 @@
 '''
 Notes:
-Method resolution order (.mro())
+Method resolution order (.mro()) by depth first, left to right (C# linearization)
+-> preserve order of base classes
 Extention, Overriding, Multiple Inheritance
 '''
 # Use the CelestialBody class to the left as the parent class. Create the Satellite and Planet classes, 
