@@ -34,10 +34,10 @@ class Planet(CelestialBody):
 # genre - a string that represents the genre of the blog post
 # page_views - an integer that represents the page views for the blog post
 class Book:
-  def __init__(self, title, author, genre):
-    self.title = title
-    self.author = author
-    self.genre = genre
+    def __init__(self, title, author, genre):
+        self.title = title
+        self.author = author
+        self.genre = genre
 
 class BlogPost(Book):
     def __init__(self, website, title, author, word_count, genre, page_views):
@@ -51,3 +51,23 @@ class BlogPost(Book):
 # Child is a subclass of Parent1 and Parent2
 # Override identify so that it returns “This method is called from Child”
 # Create the method identify2 that invokes the identify method from Parent2. This must be done using the super() keyword.
+class Parent1:
+    def identify(self):
+       return "This method is called from Parent1"
+    
+class Parent2:
+    def identify(self):
+        return "This method is called from Parent2"
+  
+class Child(Parent2, Parent1):
+    def identify(self):
+        return "This method is called from Child"
+    
+    def identify2(self):
+        return super().identify()
+
+if __name__ == "__main__":
+    child_object = Child()
+    print(child_object.identify())
+    print(child_object.identify2())
+    
