@@ -33,3 +33,15 @@ class Planet(CelestialBody):
 # word_count - an integer that represents the number of words in the blog post
 # genre - a string that represents the genre of the blog post
 # page_views - an integer that represents the page views for the blog post
+class Book:
+  def __init__(self, title, author, genre):
+    self.title = title
+    self.author = author
+    self.genre = genre
+
+class BlogPost(Book):
+    def __init__(self, website, title, author, word_count, genre, page_views):
+        super().__init__(title, author, genre)
+        self.website = website
+        self.word_count = word_count
+        self.page_views = page_views
