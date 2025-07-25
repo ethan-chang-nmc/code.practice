@@ -26,7 +26,8 @@ class Planet(CelestialBody):
         self.host_star = host_star
 
 
-# Use the parent class Book to help you solve this problem. Create the child class BlogPost and override the constructor so that the child class has the following attributes:
+# Use the parent class Book to help you solve this problem. Create the child class BlogPost and override 
+# the constructor so that the child class has the following attributes:
 # website - a string that represents the website hosting the blog post
 # title - a string that represents the title of the blog post
 # author - a string that represents the author of the blog post
@@ -50,7 +51,8 @@ class BlogPost(Book):
 # Create the class Child such that the following criteria are met:
 # Child is a subclass of Parent1 and Parent2
 # Override identify so that it returns “This method is called from Child”
-# Create the method identify2 that invokes the identify method from Parent2. This must be done using the super() keyword.
+# Create the method identify2 that invokes the identify method from Parent2. This must be done using the 
+# super() keyword.
 class Parent1:
     def identify(self):
        return "This method is called from Parent1"
@@ -70,4 +72,13 @@ if __name__ == "__main__":
     child_object = Child()
     print(child_object.identify())
     print(child_object.identify2())
-    
+
+
+# The code to the left creates a class called Bank. This class has a branch name, the number of customers, and 
+# a list of the amount of money in each customer’s bank account. The method branch_total takes the list of customer 
+# money and returns the total amount of money held by the bank.
+# Create the class RegionalBank as a child of the Bank class. This class has a name, the number of customers in the 
+# region, and a 2D list of all of the money in the bank accounts for each branch. Extend the RegionalBank class by 
+# adding the method regional_total which returns the total amount of money kept in all of the banks in the region.
+# Instantiate an object from the RegionalBank class and use the variable accounts as the 2D list of bank account. 
+# Print out the result from regional_total.
