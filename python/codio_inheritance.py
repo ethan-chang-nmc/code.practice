@@ -1,5 +1,6 @@
 '''
 Notes:
+isinstance and issubclass
 Method resolution order (.mro()) by depth first, left to right (C# linearization)
 -> preserve order of base classes
 Extention, Overriding, Multiple Inheritance
