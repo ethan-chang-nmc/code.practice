@@ -111,3 +111,10 @@ class RegionalBank(Bank):
 if __name__ == "__main__":
     here_bank = RegionalBank("here", 3, accounts)
     print(here_bank.regional_total())
+
+
+# Use the parent classes to the left to help you solve this problem. The first parent is the Person class with some 
+# very generic information. The second class, CardHolder, is the class for a credit card holder. Create the child class 
+# PlatinumClient. This class inherits all of the attributes of both parent classes. In addition, the child class has the 
+# attributes cash_back and rewards. cash_back should be set to 0.02 and rewards should be set to 0. Override the 
+# process_sale method so that 2% of each sale is added to rewards.
