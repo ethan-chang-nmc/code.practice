@@ -24,3 +24,12 @@ class Planet(CelestialBody):
     def __init__(self, size, mass, composition, name, host_star):
         super().__init__(size, mass, composition, name)
         self.host_star = host_star
+
+
+# Use the parent class Book to help you solve this problem. Create the child class BlogPost and override the constructor so that the child class has the following attributes:
+# website - a string that represents the website hosting the blog post
+# title - a string that represents the title of the blog post
+# author - a string that represents the author of the blog post
+# word_count - an integer that represents the number of words in the blog post
+# genre - a string that represents the genre of the blog post
+# page_views - an integer that represents the page views for the blog post
