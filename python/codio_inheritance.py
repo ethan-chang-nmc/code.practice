@@ -118,3 +118,42 @@ if __name__ == "__main__":
 # PlatinumClient. This class inherits all of the attributes of both parent classes. In addition, the child class has the 
 # attributes cash_back and rewards. cash_back should be set to 0.02 and rewards should be set to 0. Override the 
 # process_sale method so that 2% of each sale is added to rewards.
+class Person:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+    
+    def get_info(self):
+        return f"{self.name} lives at {self.address}."
+  
+class CardHolder:
+    def __init__(self, account_number):
+        self.account_number = account_number
+        self.balance = 0
+        self.credit_limit = 5000
+    
+    def process_sale(self, price):
+        self.balance += price
+    
+    def make_payment(self, amount):
+        self.balance -= amount
+    
+class PlatinumClient(Person, CardHolder):
+    cash_back = 0.02
+    def __init__(self, name, address, account_number):
+        Person.__init__(self, name, address)
+        CardHolder.__init__(self, account_number)
+        self.rewards = 0
+    
+    def process_sale(self, price):
+        CardHolder.process_sale(self, price)
+        self.rewards += int(self.cash_back * price)
+
+if __name__ == "__main__":
+    platinum = PlatinumClient("Sarah", "101 Main Street", 123364)
+    platinum.process_sale(100)
+    print(platinum.rewards)
+    print(platinum.balance)
+    platinum.make_payment(50)
+    print(platinum.balance)
+    print(platinum.get_info())
