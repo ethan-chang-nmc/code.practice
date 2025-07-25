@@ -82,3 +82,32 @@ if __name__ == "__main__":
 # adding the method regional_total which returns the total amount of money kept in all of the banks in the region.
 # Instantiate an object from the RegionalBank class and use the variable accounts as the 2D list of bank account. 
 # Print out the result from regional_total.
+import sys
+strings = [l.split(",") for l in sys.argv[1].split("*")]
+accounts = [[int(n) for n in s] for s in strings]
+
+class Bank:
+    def __init__(self, name, customers, accounts):
+        self.name = name
+        self.customers = customers
+        self.accounts = accounts
+    
+    def branch_total(self, accounts):
+        total = 0
+        for account in accounts:
+            total += account
+        return total
+
+class RegionalBank(Bank):
+    def __init__(self, name, customers, accounts):
+        super().__init__(name, customers, accounts)
+    
+    def regional_total(self):
+        grand_total = 0
+        for bank in self.accounts:
+            grand_total += self.branch_total(bank)
+        return grand_total
+    
+if __name__ == "__main__":
+    here_bank = RegionalBank("here", 3, accounts)
+    print(here_bank.regional_total())
