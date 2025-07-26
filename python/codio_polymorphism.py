@@ -15,3 +15,5 @@ because, in this case, a single function works with objects of different types.
 -> define function (i.e. print_function) taking obj as parameter and executing wanted method
 -> check for existence of method (try except AttributeError)
 '''
+# Use the Lottery class to the left as the parent class. Create the PowerBall class as a child class of 
+# Lottery. Override the shuffle method so that it returns a list of six random integers between 1 and 99.
