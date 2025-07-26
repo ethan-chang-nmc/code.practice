@@ -2,9 +2,16 @@
 Notes:
 Polymorphism - single interface is applicable with different types (i.e. + operator)
 -> method overriding is a form
-Overloading - single method name that can take different sets of parameters
+Method Overloading - single method name that can take different sets of parameters
 -> also example of polymorphism
 -> when two methods have same name, python recognizes the last method (ignores rest)
 -> declare method with optional parameters set to None
 -> ex: print(int.__mul__(num1, num2)) for *, (int.__truediv__(num1, num2))
+Operator overloading - __operation__ (dunder/magic methods)
+-> applies to all inssnes suitibility by what it does, not by type
+-> ex: The print_hit function does not care if the object is has the type BaseballPlayer 
+or Song. It only cares if the object has a hit method. Duck typing is an example of polymorphism 
+because, in this case, a single function works with objects of different types.
+-> define function (i.e. print_function) taking obj as parameter and executing wanted method
+-> check for existence of method (try except AttributeError)
 '''
