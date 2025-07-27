@@ -29,3 +29,19 @@ my_laptop = tech.Laptop(name = "MacBook Pro", size = 15, storage = 256)
 
 
 # You have been given the class Band. Extend the class such that it will produce specific output when using the print and repr.
+class Band:
+    def __init__(self, name, genre, members):
+        self.name = name
+        self.genre = genre
+        self.members = members
+    
+    def __str__(self):
+        return f"{self.name} is a {self.genre} band."
+
+    def __repr__(self):
+        return f"Band({self.name}, {self.genre}, {self.members})"
+
+if __name__ == "__main__":
+    dead = Band('The Grateful Dead', 'rock\'n roll', ['Jerry', 'Bob', 'Mickey', 'Bill', 'Phil', 'Pigpen'])
+    print(dead)
+    print(repr(dead))
