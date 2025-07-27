@@ -116,3 +116,26 @@ if __name__ == "__main__":
 
 # Create the Median that has the method calculate_median that calculates the median of the integers passed to the method. 
 # Use method overloading so that this method can accept anywhere from two to five parameters.
+class Median:
+    def __init__(self):
+        pass
+
+    def calculate_median(self, num1, num2, num3 = None, num4 = None, num5 = None): # can use *args but for sake of the problem set each is listed explicitly
+        list = [num1, num2, num3, num4, num5]
+        final_list = []
+        for number in list:
+            if number != None:
+                final_list.append(number)
+        final_list.sort()
+        length = len(final_list)
+        if length % 2 == 0:
+            return (final_list[(length // 2) - 1] + final_list[(length // 2)])/2
+        else:
+            return final_list[length // 2]
+        
+if __name__ == "__main__":
+    m = Median()
+    m.calculate_median(3, 5, 1, 4, 2)
+    m.calculate_median(8, 6, 4, 2)
+    m.calculate_median(9, 3, 7)
+    m.calculate_median(5, 2)
