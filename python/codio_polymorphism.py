@@ -36,3 +36,7 @@ class PowerBall(Lottery):
 if __name__ == "__main__":
     output = PowerBall()
     print(output.shuffle())
+
+
+# Complete the Airplane and Train classes so that when an instance of each is passed to the passengers function, 
+# they will return the total number of passengers on board.
