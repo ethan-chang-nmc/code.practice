@@ -26,3 +26,6 @@ import tech
 
 my_phone = tech.Phone(name = "Pixel 5", color = "sage", storage = 128)
 my_laptop = tech.Laptop(name = "MacBook Pro", size = 15, storage = 256)
+
+
+# You have been given the class Band. Extend the class such that it will produce specific output when using the print and repr.
