@@ -159,3 +159,15 @@ class Median:
       median = numbers[median_index]
     return median
 '''
+
+
+# The Substitute class reads a text file and replaces every fifth word with the string HELLO.
+# Create the class Stars which is a child class of Substitute. Then override the swap_words method so that every third word is replaced by a series of *. If the word has three letters then it should be replaced with ***. The number of * should match the number of characters in the word. Write the new string to self.answer_file.
+# Important
+# Keep the following things in mind as you write your code. Changes should only be made to the Stars class; do not alter the code for the file variables and the Substitute class.
+# The source_file attribute represents the file you will read.
+# The answer_file attribute represents the file to which you will write your new text.
+# The string_to_list method converts the string (the text file) into a 2D list. Each inner list represents a sentence. The elements of each inner list are the words that make up that sentence.
+# The list_to_string method converts the 2D list back into a string.
+# When you override the swap_words methods, be sure to start with string_to_list and use list_to_string before writing to the file.
+# The text used for this activity are the first four sentences of Jane Austen’s Pride and Prejudice.
