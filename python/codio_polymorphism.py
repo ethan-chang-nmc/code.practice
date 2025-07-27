@@ -112,3 +112,7 @@ if __name__ == "__main__":
     print(c1 > c2) # prints 'True'
     print(c1 < c2) # prints 'False'
     print(c1 == c1) # prints 'True'
+
+
+# Create the Median that has the method calculate_median that calculates the median of the integers passed to the method. 
+# Use method overloading so that this method can accept anywhere from two to five parameters.
