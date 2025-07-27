@@ -70,3 +70,7 @@ if __name__ == "__main__":
     my_train = Train()
     passengers(my_plane)
     passengers(my_train)
+
+
+# Create the class Characters which has the attribute phrases which is a list of strings passed as a parameter. 
+# Overload the <, >, and == operators so that you can make comparisons based on the total number of characters in the string.
