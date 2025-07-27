@@ -45,3 +45,13 @@ if __name__ == "__main__":
     dead = Band('The Grateful Dead', 'rock\'n roll', ['Jerry', 'Bob', 'Mickey', 'Bill', 'Phil', 'Pigpen'])
     print(dead)
     print(repr(dead))
+
+
+# Create the Dog class with attributes for name and breed. Then create a list called dogs that contains five Dog objects according to the following table:
+# Position	  Name	  Breed
+# 1	Marceline German  Shepherd
+# 2	Cajun	  Belgian Malinois
+# 3	Daisy	  Border  Collie
+# 4	Rocky	  Golden  Retriever
+# 5	Bella	  Irish   Setter
+# Verify that the name and breed of the dogs in the list match the order of the table. In addition, the auto-grader expects the list to be named dogs.
