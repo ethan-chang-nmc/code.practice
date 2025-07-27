@@ -22,3 +22,7 @@ __repr__ method - information useful for developer
 # color "sage", and 128 gigabytes of storage. Important, all numbers passed to the constructor should be integers.
 # Instantiate an instance of the Laptop class and call it my_laptop. It should have the name "MacBook Pro", 
 # a size of 15 inches, and 256 gigabytes of storage. Important, all numbers passed to the constructor should be integers.
+import tech
+
+my_phone = tech.Phone(name = "Pixel 5", color = "sage", storage = 128)
+my_laptop = tech.Laptop(name = "MacBook Pro", size = 15, storage = 256)
