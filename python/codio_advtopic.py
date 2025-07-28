@@ -99,3 +99,26 @@ class Book:
 # get_num_items	Returns the number of different items in the shopping cart
 # get_items	Returns a list of all of the items in the cart
 # __str__	Returns a human-readable string; see the Expected Output section for the format
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
+        self.total = 0
+    
+    def calculate_total(self):
+        self.total += self.items[-1].price
+
+    def add_item(self, item):
+        self.items.append(item)
+        self.calculate_total()
+    
+    def get_total(self):
+        return self.total
+    
+    def get_num_items(self):
+        return len(self.items)
+    
+    def get_items(self):
+        return self.items
+    
+    def __str__(self):
+        return f"The cart has {} items for a total of ${}"
