@@ -122,3 +122,17 @@ class ShoppingCart:
     
     def __str__(self):
         return f"The cart has {} items for a total of ${}"
+
+# The Item Class
+# Important, the subtotal attribute is not passed to the constructor. Initialize this attribute with a 0. Your Item class should have the following attributes:
+# Attribute	Explanation
+# name	Name of the item
+# price	How much the item costs
+# quantity	How many items you have
+# subtotal	Value of all of the items
+# It should also have the following methods:
+# Method	Explanation
+# __init__	The order of the parameters should be name, price, and then quantity
+# calculate_subtotal	Assigns the total value of the items to the subtotal attribute
+# get_subtotal	Returns the subtotal attribute
+# __repr__	Returns a precise object definition; see the Expected Output section for the format
