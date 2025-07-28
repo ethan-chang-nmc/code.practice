@@ -69,3 +69,6 @@ dogs.append(Dog("Bella", "Irish Setter"))
 print(dogs)
 
 
+# You are given code for the Library class (in its own file). This is a composite class. You are going to create 
+# the Book class (the component class) in book.py file. Look over the Library class carefully to determine what 
+# attributes are needed for the Book class. In addition, the table of output contains a hint as to what method the Book class needs.
