@@ -72,3 +72,18 @@ print(dogs)
 # You are given code for the Library class (in its own file). This is a composite class. You are going to create 
 # the Book class (the component class) in book.py file. Look over the Library class carefully to determine what 
 # attributes are needed for the Book class. In addition, the table of output contains a hint as to what method the Book class needs.
+class Book:
+    def __init__(self, title, author, genre):
+        self.title = title
+        self.author = author
+        self.genre = genre
+    
+    def __repr__(self):
+        return f"Book({self.title}, {self.author}, {self.genre})"
+
+
+# You are going to write a program that simulates an online shopping cart. Create the composite class ShoppingCart in 
+# the shopping_cart.py file, and create the component class Item in the item.py file. The tables below indicate which 
+# attributes and methods your classes will need to create.
+# The Shopping Cart Class
+# Important, the ShoppingCart class should initialize the attributes to either a 0 or an empty list. Your ShoppingCart class should have the following attributes:
