@@ -87,3 +87,15 @@ class Book:
 # attributes and methods your classes will need to create.
 # The Shopping Cart Class
 # Important, the ShoppingCart class should initialize the attributes to either a 0 or an empty list. Your ShoppingCart class should have the following attributes:
+# Attribute	Explanation
+# items	List of Item elements
+# total	Total value of all of the items in the shopping cart
+# It should also have the following methods:
+# Method	Explanation
+# __init__	The constructor should not take have any arguments
+# add_item	Add an item to the shopping cart and then calls the calculate_total method
+# calculate_total	Assigns the total value of the shopping cart to the total attribute
+# get_total	Returns the total value of the shopping cart
+# get_num_items	Returns the number of different items in the shopping cart
+# get_items	Returns a list of all of the items in the cart
+# __str__	Returns a human-readable string; see the Expected Output section for the format
