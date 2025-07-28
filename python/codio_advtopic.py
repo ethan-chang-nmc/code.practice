@@ -55,3 +55,17 @@ if __name__ == "__main__":
 # 4	Rocky	  Golden  Retriever
 # 5	Bella	  Irish   Setter
 # Verify that the name and breed of the dogs in the list match the order of the table. In addition, the auto-grader expects the list to be named dogs.
+class Dog:
+    def __init__(self, name, breed):
+        self.name = name
+        self.breed = breed
+    
+dogs = []
+dogs.append(Dog("Marceline", "German Shepherd"))
+dogs.append(Dog("Cajun", "Belgian Malinois"))
+dogs.append(Dog("Daisy", "Border Collie"))
+dogs.append(Dog("Rocky", "Golden Retriever"))
+dogs.append(Dog("Bella", "Irish Setter"))
+print(dogs)
+
+
