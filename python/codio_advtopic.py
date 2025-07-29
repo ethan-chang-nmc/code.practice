@@ -105,7 +105,8 @@ class ShoppingCart:
         self.total = 0
     
     def calculate_total(self):
-        self.total += self.items[-1].price
+        self.items[-1].calculate_subtotal()
+        self.total += self.items[-1].get_subtotal()
 
     def add_item(self, item):
         self.items.append(item)
@@ -121,7 +122,7 @@ class ShoppingCart:
         return self.items
     
     def __str__(self):
-        return f"The cart has {} items for a total of ${}"
+        return f"The cart has {self.get_num_items()} items for a total of ${self.total}"
 
 # The Item Class
 # Important, the subtotal attribute is not passed to the constructor. Initialize this attribute with a 0. Your Item class should have the following attributes:
@@ -136,3 +137,63 @@ class ShoppingCart:
 # calculate_subtotal	Assigns the total value of the items to the subtotal attribute
 # get_subtotal	Returns the subtotal attribute
 # __repr__	Returns a precise object definition; see the Expected Output section for the format
+class Item:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        self.subtotal = 0
+    
+    def calculate_subtotal(self):
+        self.subtotal = self.price * self.quantity
+    
+    def get_subtotal(self):
+        return self.subtotal
+
+    def __repr__(self):
+        return f"Item({self.name}, {self.price}, {self.quantity}, {self.subtotal})"
+'''
+Given Solution:
+class ShoppingCart:
+  def __init__(self):
+    self.items = []
+    self.total = 0
+    
+  def add_item(self, item):
+    self.items.append(item)
+    self.calculate_total()
+    
+  def calculate_total(self):
+    self.total = 0
+    for item in self.items:
+      item.calculate_subtotal()
+      self.total += item.get_subtotal()
+      
+  def get_total(self):
+    return self.total
+  
+  def get_num_items(self):
+    return len(self.items)
+  
+  def get_items(self):
+    return self.items
+  
+  def __str__(self):
+    return f'The cart has {self.get_num_items()} items for a total of ${self.total}'
+
+class Item:
+  def __init__(self, name, price, quantity):
+    self.name = name
+    self.price = price
+    self.quantity = quantity
+    self.subtotal = 0
+    
+  def calculate_subtotal(self):
+    self.subtotal = self.quantity * self.price
+    
+  def get_subtotal(self):
+    return self.subtotal
+  
+  def __repr__(self):
+    return f'Item({self.name}, {self.price}, {self.quantity}, {self.subtotal})'
+'''
